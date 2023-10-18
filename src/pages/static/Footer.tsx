@@ -8,7 +8,7 @@ import img1 from "../../assets/linkedin-original.svg"
 import img2 from "../../assets/instagram.png"
 import img3 from "../../assets/facebook-original.svg"
 import img4 from "../../assets/youtube.png"
-import Globalcard from "../../Global/Globalcard"
+import Globalcard from "../../Globalcard"
 
 const Footer = () => {
   return <div className="
