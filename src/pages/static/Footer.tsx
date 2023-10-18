@@ -108,7 +108,7 @@ const Footer = () => {
       <Globalcard
       title="GET IN TOUCH"
       text1="Contact"
-      text2="Get a quote"
+      text2="Get a quote today"
       />
     </div>
     <div className="
