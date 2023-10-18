@@ -51,7 +51,7 @@ const Footer = () => {
         flex
         mt-[20px]
         text-[25px]
-        w-[180px]
+        w-[200px]
         justify-around
         ">
           <BsGithub/>
@@ -121,9 +121,9 @@ const Footer = () => {
     ">
       <div className="
       mb-[10px]
-      text-[18px]
+      text-[16px]
       text-white
-      ">Imprint/Legal | Privacy | Terms | Cookie Preference | Sitemap</div>
+      ">Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap</div>
       <div className="
       mb-[10px]
       text-[14px]
