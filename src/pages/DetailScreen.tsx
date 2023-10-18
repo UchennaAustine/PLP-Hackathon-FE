@@ -1,4 +1,7 @@
 import { FiSearch } from "react-icons/fi";
+import { RiCompassLine } from "react-icons/ri";
+import { TiWeatherShower, TiWeatherDownpour } from "react-icons/ti";
+import { IoNavigate } from "react-icons/io5";
 
 const DetailScreen = () => {
   return (
@@ -17,20 +20,53 @@ const DetailScreen = () => {
             <FiSearch className="text-[25px]  ml-[5px]" />
           </div>
         </div>
-        <div className="w-[75%] h-[500px] bg-slate-400">
+        <div className="w-[70%] h-[600px] ">
           {/* part A */}
-          <div className="h-[40%] w-full flex">
-            <div className="w-[40%] ">
-              <span>Oct 18, 04:35pm</span>
-              <span>Ifo, NG</span>
+          <div className="h-[40%] w-full flex justify-between">
+            <div className="w-[30%] flex flex-col">
+              <span className="text-[14px] font-[400] ml-1">
+                Oct 18, 04:35pm
+              </span>
+              <span className="text-[24px] font-[700] ml-1 mb">Ifo, NG</span>
               <div>
-                <TiWeatherShower />
-                <span>31°C</span>
-                <span>Feels like 36°C. Light rain. Light breeze</span>
-                <div>
+                <div className="flex items-center">
+                  <TiWeatherShower className="text-[30px] ml-1" />
+                  <span className="text-[36px] font-[100]">31°C</span>
+                </div>
+                <span className="text-[14px] font-[700] ml-1">
+                  Feels like 36°C. Light rain. Light breeze
+                </span>
+                {/* last */}
+                <div className="border-l-[1px] border-[orange]">
+                  {/* first */}
+                  <div className="flex items-center ml-1 ">
+                    <TiWeatherDownpour className="text-[22px] mr-1" />
+                    <span className="font-[400] text-[14px] ">0.13mm</span>
+                  </div>
+                  <div className="flex items-center ml-1">
+                    <IoNavigate className="text-[20px] mr-1" />
+                    <span className="font-[400] text-[14px]">1.8m/s SSW</span>
+                  </div>
+                  {/* second */}
+                  <div className="flex items-center ">
+                    <div className="flex items-center ml-1">
+                      <RiCompassLine className="text-[22px] mr-1" />
+                      <span className="font-[400] text-[14px]">1009hPa</span>
+                    </div>
+
+                    <span className="font-[400] text-[14px] ml-2">
+                      Humidity: 60%
+                    </span>
+                    <span className="font-[400] text-[14px] ml-2">UV: 1</span>
+                  </div>
+                  {/* third */}
                   <div>
-                    <TiWeatherDownpour />
-                    <span>0.13mm</span>
+                    <span className="font-[400] text-[14px] ml-2">
+                      Dew point: 23°C
+                    </span>
+                    <span className="font-[400] text-[14px] ml-2">
+                      Visibility: 10.0km
+                    </span>
                   </div>
                 </div>
               </div>
@@ -40,7 +76,42 @@ const DetailScreen = () => {
             </div>
           </div>
           {/* part B */}
-          <div className="h-[60%] w-full  bg-[silver] "></div>
+          <div className="h-[60%] w-full  bg-[silver] flex pt-[10px]">
+            <div className="w-[55%] h-full    ">
+              <p className="text-[18px] font-[700] ml-2">Hourly forecast</p>
+            </div>
+            <div className="w-[45%] h-full  bg-[silver]  ">
+              <p className="text-[18px] font-[700] ml-3">8-day forecast</p>
+              {/* props */}
+              <div className="flex items-center justify-between w-full px-[15px] my-[] ">
+                <span className="text-[14px] font-[400]">Wed, Oct 19</span>
+                <div className="flex justify-between items-center">
+                  <IoNavigate />{" "}
+                  <span className="text-[14px] font-[400] w-[75px] text-end">
+                    33 / 22°C
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] w-[80px] ">moderate rain</span>
+                  <IoNavigate className="text-[10px] " />
+                </div>
+              </div>
+              {/* props */}
+              <div className="flex items-center justify-between w-full px-[15px]">
+                <span className="text-[14px] font-[400]">Wed, Oct 19</span>
+                <div className="flex justify-between items-center">
+                  <IoNavigate />{" "}
+                  <span className="text-[14px] font-[400] w-[75px] text-end">
+                    33 / 22°C
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] w-[80px] ">moderate rain</span>
+                  <IoNavigate className="text-[10px] " />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
