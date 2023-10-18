@@ -8,7 +8,8 @@ export default {
     extend: {
       screens:{
         small:{max:"320px"},
-        medium:{max:"770px"}
+        semiSmall:{max:"375px"},
+        medium:{max:"770px"},
       }
     },
   },
