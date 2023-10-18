@@ -6,14 +6,32 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { BsLinkedin } from "react-icons/bs";
 import imgs from "../../assets/undraw_weather_re_qsmd (1).svg";
 import { Link } from "react-router-dom";
-
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 const Register = () => {
+  const Schema = yup.object({
+    email: yup.string().required().email(),
+    password: yup.string().required(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(Schema),
+  });
+  const onSubmit = handleSubmit(async (data: any) => {
+    console.log(data);
+  });
+
   return (
     <div className="w-full h-[100vh] bg-slate-200 flex items-center justify-between">
       <div className="w-[699px] h-[661px]  flex items-center justify-center">
         <img src={imgs} alt="loading..." className="h-[300px]" />
       </div>
-      <div className="w-[665px] h-[661px] bg-white">
+      <div className="w-[665px] h-[661px] bg-white" onSubmit={onSubmit}>
         <div className="flex items-center justify-end mt-5">
           <span className="flex items-center justify-center text-[18px] font-bold">
             Already have an account?
@@ -24,7 +42,7 @@ const Register = () => {
             </p>
           </Link>
         </div>
-        <div className="flex items-center justify-center flex-col mt-7">
+        <form className="flex items-center justify-center flex-col mt-7">
           <span className="text-[20px] font-bold">Reigster your account</span>
           <div className="mt-5 pl-5">
             <span className="text-[25px] font-bold ">E-mail</span>
@@ -32,10 +50,12 @@ const Register = () => {
               type="text"
               placeholder="Enter your E-mail"
               className="outline-none w-[640px] h-[40px] bg-white border-[#004AAD] border pl-4 rounded-md"
+              required
+              {...register("email")}
             />
-            <p className="flex items-center justify-end mr-5 text-[red]">
-              Error
-            </p>
+            <span className="text-[red] flex items-center justify-end">
+              {errors?.email?.message}
+            </span>
           </div>
           <div className="mt-5 pl-5">
             <span className="text-[25px] font-bold pl-3">Password</span>
@@ -43,12 +63,17 @@ const Register = () => {
               type="text"
               placeholder="Enter your Password"
               className="outline-none w-[640px] h-[40px] bg-white border border-[#004AAD] rounded-md pl-4"
+              required
+              {...register("password")}
             />
-            <p className="flex items-center justify-end mr-5 text-[red]">
-              Error
-            </p>
+            <span className="text-[red] flex items-center justify-end">
+              {errors?.password?.message}
+            </span>
           </div>
-          <button className=" w-[200px] h-[60px] flex items-center justify-center bg-[#004AAD] rounded-full text-[23px] font-bold text-white mr-56 mt-5">
+          <button
+            className=" w-[200px] h-[60px] flex items-center justify-center bg-[#004AAD] rounded-full text-[23px] font-bold text-white mr-56 mt-5"
+            type="submit"
+          >
             Sign up
           </button>
           <div className="flex mt-5 items-center justify-center">
@@ -68,7 +93,7 @@ const Register = () => {
               <RiTwitterXFill size={30} />
             </p>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
