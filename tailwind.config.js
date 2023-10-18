@@ -10,7 +10,8 @@ export default {
       screens:{
         small:{max:"320px"},
         semiSmall:{max:"375px"},
-        medium:{max:"770px"},
+        quarterSmall:{max:"425px"},
+        medium:{max:"768px"},
       }
     },
   },
