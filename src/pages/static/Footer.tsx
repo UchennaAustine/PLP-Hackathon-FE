@@ -13,25 +13,28 @@ import Globalcard from "../../Globalcard"
 const Footer = () => {
   return <div className="
   w-[100%]
-  h-[450px]
+  min-h-[450px]
   bg-[#184157]
   flex
   justify-center
   ">
     <div className="
     w-[90%]
-    h-[100%]
+    min-h-[100%]
     flex
     flex-col
     justify-center
     ">
     <div className="
     w-[100%]
-    h-[50%]
+    min-h-[50%]
     flex
     justify-between
+    medium:flex-wrap
     ">
-      <div>
+      <div className="
+      medium:hidden
+      ">
         <div className="
         flex
         items-center
@@ -84,6 +87,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+
       <Globalcard
       title="PRODUCT"
       text1="Pricing"
@@ -112,17 +117,85 @@ const Footer = () => {
       />
     </div>
     <div className="
+    hidden medium:flex flex-col mt-[5px] small:mt-[30px] mb-[30px] 
+    ">
+        <div className="
+        flex
+        items-center
+        ">
+          <GiTripleCorn className="
+          text-[#698899]
+          text-[40px]
+          small:text-[30px]
+          "/>
+          <div className="
+          text-[30px]
+          text-[#698899]
+          ml-[5px]
+          font-[500]
+          small:text-[25px] small:font-[700]
+          ">ECO~DATA</div>
+        </div>
+        <div className="
+        flex
+        mt-[5px]
+        text-[25px]
+        w-[180px]
+        justify-around
+        small:text-[19px]
+        ">
+          <BsGithub/>
+          <div className="
+          w-[25px]
+          h-[25px]
+          small:h-[20px]
+          small:w-[20px]
+          ">
+          <img src={img3}/>
+          </div>
+          <div className="
+          w-[25px]
+          h-[25px]
+          small:h-[20px]
+          small:w-[20px]
+          ">
+          <img src={img4}/>
+          </div>
+          <div className="
+          w-[23px]
+          h-[23px]
+          small:h-[20px]
+          small:w-[20px]
+          ">
+          <img src={img2}/>
+          </div>
+          <AiOutlineTwitter className="
+          text-[#1DA1F2]
+          "/>
+          <div className="
+          w-[25px]
+          h-[25px]
+          small:h-[20px]
+          small:w-[20px]
+          ">
+          <img src={img1}/>
+          </div>
+        </div>
+      </div>
+    <div className="
     w-[100%]
     h-[30%]
     flex
     flex-col
     justify-center
     items-center
+    small:text-center
     ">
       <div className="
       mb-[10px]
       text-[16px]
       text-white
+      small:text-[15px ]
       ">Imprint / Legal | Privacy | Terms | Cookie Preference | Sitemap</div>
       <div className="
       mb-[10px]
