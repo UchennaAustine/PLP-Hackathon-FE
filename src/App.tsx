@@ -3,7 +3,7 @@
 import { RouterProvider } from "react-router-dom";
 import { mainRouter } from "./router/mainRouter";
 import { Provider } from "react-redux";
-import { store } from "./global/store";
+import { store } from "./mainGlobal/store";
 
 const App = () => {
   return (
