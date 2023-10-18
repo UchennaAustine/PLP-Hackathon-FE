@@ -13,23 +13,25 @@ import Globalcard from "../../Global/Globalcard"
 const Footer = () => {
   return <div className="
   w-[100%]
-  h-[450px]
+  min-h-[450px]
   bg-[#184157]
   flex
   justify-center
   ">
     <div className="
     w-[90%]
-    h-[100%]
+    min-h-[100%]
     flex
     flex-col
     justify-center
     ">
     <div className="
     w-[100%]
-    h-[50%]
+    min-h-[50%]
     flex
     justify-between
+    medium:flex-wrap
+    bg-[red]
     ">
       <div>
         <div className="
