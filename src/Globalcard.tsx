@@ -18,11 +18,10 @@ const Globalcard:React.FC<iData> = ({
 }) => {
   return (
     <div className="
-    w-[150px]
-    h-[190px]
+    w-[130px]
     text-white
     text-[15px]
-    mt-[10px]
+    mt-[20px]
     ">
         <div className="
         font-[500]
