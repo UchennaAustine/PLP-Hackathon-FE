@@ -1,6 +1,8 @@
 /** @format */
 
 import bg from "../assets/mountains.svg";
+import Header from "./static/Header";
+import { GiTrophyCup } from "react-icons/gi";
 const Hero = () => {
   return (
     <>
@@ -12,7 +14,44 @@ const Hero = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      ></div>
+      >
+        <div
+          className="w-[100%] h-[90vh]"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
+          <Header />
+          <div className="w-[100%] h-[200px]  flex items-center justify-center">
+            <div className="w-[85%] h-[200px]  flex items-center justify-between">
+              <div className="text-white flex items-center justify-center flex-col mt-56">
+                <span className=" text-[35px] font-bold  mr-20">
+                  Real-Time & Historical <br /> World Weather Data API
+                </span>
+                <p className=" text-[20px] font-bold ">
+                  Retrieve instant, accurate weather information for <br /> any
+                  location in the world in lightweight JSON format
+                </p>
+                <div className=" px-10 py-3 rounded-full bg-[#43677C] flex items-center justify-center">
+                  <GiTrophyCup size={25} />
+                  <span className="text-[20px] font-bold">
+                    Trusted by 75,000 companies worldwide
+                  </span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="px-7 py-4 rounded-md text-white bg-[#F47E45] font-bold">
+                    START USING THE API
+                  </div>
+                  <span className="ml-3">— It's free!</span>
+                </div>
+              </div>
+              <div className="w-[550px] h-[400px] border-[2px] mt-56 border-[#5F8094] ml-5 flex-col flex items-center  ">
+                <span>Makoko, Lagos, Nigeria</span>
+                <div className="w-[550px] h-[150px] flex items-center justify-between border mt-6"></div>
+                <div className="w-[550px] h-[140px] flex items-center justify-between border mt-28"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
