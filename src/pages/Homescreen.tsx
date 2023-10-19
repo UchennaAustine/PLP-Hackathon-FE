@@ -1,7 +1,13 @@
 /** @format */
 
+import Hero from "./Hero";
+
 const Homescreen = () => {
-  return <div>Homescreen</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default Homescreen;
